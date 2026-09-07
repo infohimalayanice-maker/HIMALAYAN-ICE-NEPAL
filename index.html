@@ -1,0 +1,2283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HIMALAYAN ICE | Premium Ice Cubes &amp; Ice Delivery in Itahari</title>
+  <meta name="description" content="HIMALAYAN ICE supplies premium crystal-clear ice cubes for cafés, restaurants, hotels, bars, events, retailers and homes in Itahari, Sunsari, Nepal." />
+  <meta name="keywords" content="premium ice Itahari, ice delivery Sunsari, crystal clear ice, hygienic ice, restaurant ice, event ice" />
+  <meta property="og:title" content="HIMALAYAN ICE | Premium Ice Delivery in Itahari" />
+  <meta property="og:description" content="Premium crystal-clear ice cubes for cafés, restaurants, hotels, bars, events, retailers and homes in Itahari, Sunsari, Nepal." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/logo.png" />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+    /* ========== CSS VARIABLES ========== */
+    :root {
+      --primary: #053E83;
+      --primary-dark: #032A5A;
+      --primary-light: #0A5BB5;
+      --ice-blue: #E8F4FC;
+      --ice-blue-soft: #F0F8FF;
+      --white: #F7F7F2;
+      --pure-white: #FFFFFF;
+      --soft-gray: #E5E9F0;
+      --text-dark: #053E83;
+      --text-muted: #315C85;
+      --navy: #0A1628;
+      --glass: rgba(255, 255, 255, 0.15);
+      --glass-border: rgba(255, 255, 255, 0.25);
+      --shadow: 0 10px 40px rgba(5, 62, 131, 0.12);
+      --shadow-lg: 0 20px 60px rgba(5, 62, 131, 0.18);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-body: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-display: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    /* ========== RESET & BASE ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      overflow-x: clip;
+    }
+    body {
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button, input, select, textarea { font-family: inherit; }
+    :focus-visible {
+      outline: 3px solid #8ed3ff;
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(16px, 3vw, 24px);
+    }
+
+    /* ========== TYPOGRAPHY ========== */
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .section-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    /* ========== BUTTONS ========== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 8px 24px rgba(5, 62, 131, 0.35);
+    }
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(5, 62, 131, 0.45);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    .btn-secondary:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+    .btn-white {
+      background: white;
+      color: var(--primary);
+    }
+    .btn-white:hover {
+      background: var(--ice-blue);
+      transform: translateY(-2px);
+    }
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+    .btn-whatsapp:hover {
+      background: #1DA851;
+      transform: translateY(-2px);
+    }
+    .btn-full { width: 100%; }
+
+    /* ========== NAVIGATION ========== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 16px 0;
+      transition: var(--transition);
+      background: transparent;
+    }
+    .navbar.scrolled {
+      background: rgba(247, 247, 242, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 4px 24px rgba(5, 62, 131, 0.08);
+      padding: 10px 0;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-img {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+    }
+    .navbar.scrolled .logo-img { height: 44px; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-links a {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      border-radius: 50px;
+      transition: var(--transition);
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+      background: rgba(5, 62, 131, 0.08);
+    }
+    .nav-cta {
+      margin-left: 12px;
+      padding: 10px 22px;
+      font-size: 0.9rem;
+    }
+    .nav-links a.nav-cta,
+    .nav-links a.nav-cta:hover,
+    .nav-links a.nav-cta.active {
+      color: #fff;
+      background: var(--primary);
+    }
+    .nav-links a.nav-cta:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .hamburger span {
+      width: 24px;
+      height: 2.5px;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .hamburger.active span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 280px;
+      height: 100vh;
+      background: white;
+      z-index: 999;
+      padding: 100px 32px 40px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+      box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+    }
+    .mobile-menu.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    .mobile-menu a {
+      display: block;
+      padding: 14px 0;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      border-bottom: 1px solid var(--soft-gray);
+    }
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 998;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+    .mobile-overlay.open { opacity: 1; visibility: visible; }
+
+    /* ========== HERO ========== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+      background: linear-gradient(160deg, #E8F4FC 0%, #F0F8FF 40%, #FFFFFF 100%);
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(90deg, rgba(232, 244, 252, 0.9) 0%, rgba(232, 244, 252, 0.62) 36%, rgba(232, 244, 252, 0.2) 100%),
+        url('assets/hero-city-ice-cup.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(5, 62, 131, 0.08);
+      color: var(--primary);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+    .hero-brand {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--primary);
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      line-height: 0.95;
+      text-transform: uppercase;
+      font-family: var(--font-display);
+    }
+    .hero h1 {
+      font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+      color: var(--primary);
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+    .hero h1 span { display: block; }
+    .hero h1 .logo-texture {
+      display: inline-block;
+      color: var(--primary);
+      background-color: var(--primary);
+      background-image: url('assets/logo.png');
+      background-size: 360px auto;
+      background-position: center 42%;
+      background-repeat: no-repeat;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-sub {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+    }
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin-bottom: 36px;
+    }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+    .hero-ctas .btn {
+      min-width: 180px;
+      padding: 16px 30px;
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+    }
+    .hero-ctas .btn-primary {
+      box-shadow: 0 10px 28px rgba(5, 62, 131, 0.28);
+    }
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-logo-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 430px;
+      aspect-ratio: 4 / 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--ice-blue);
+      box-shadow: var(--shadow-lg);
+      animation: heroImageReveal 0.9s ease both, heroImageFloat 7s ease-in-out 0.9s infinite;
+    }
+    .hero-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    @keyframes heroImageReveal {
+      from { opacity: 0; transform: translateY(24px) scale(0.97); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes heroImageFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .ice-glow {
+      position: absolute;
+      width: 70%;
+      height: 70%;
+      background: radial-gradient(circle, rgba(5, 62, 131, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(40px);
+      z-index: -1;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-logo-wrap { animation: none; }
+    }
+
+    /* ========== TRUST BAR ========== */
+    .trust-bar {
+      background: var(--primary);
+      color: white;
+      padding: 28px 0;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+    .trust-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .trust-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .trust-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .trust-item span {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    /* ========== SECTIONS COMMON ========== */
+    section {
+      padding: clamp(72px, 10vw, 100px) 0;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: clamp(28px, 5vw, 56px);
+    }
+    .section-header .section-subtitle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ========== ABOUT ========== */
+    .about {
+      background: var(--pure-white);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .about-content h2 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      max-width: 520px;
+      color: var(--primary);
+      margin-bottom: 28px;
+      line-height: 1.05;
+    }
+    .about-content p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+    }
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .about-feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: var(--radius-sm);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .about-feature::before {
+      content: '✓';
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .about-visual {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 1086 / 1448;
+      background: var(--ice-blue);
+      box-shadow: var(--shadow-lg);
+    }
+    .about-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      transition: transform 0.7s ease;
+    }
+    .about-visual:hover .about-image {
+      transform: scale(1.03);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .about-image { transition: none; }
+    }
+
+    /* ========== PRODUCTS ========== */
+    .products {
+      background: linear-gradient(180deg, var(--ice-blue-soft) 0%, var(--white) 100%);
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .product-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .product-img {
+      height: 180px;
+      background: linear-gradient(135deg, #E8F4FC, #C5E0F5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .product-img.packaged-img {
+      aspect-ratio: 4 / 3;
+      height: auto;
+      min-height: 0;
+    }
+    .product-img.bulk-img {
+      aspect-ratio: 4 / 3;
+      height: auto;
+      min-height: 0;
+    }
+    .product-img.premium-img {
+      aspect-ratio: 4 / 3;
+      height: auto;
+      min-height: 0;
+    }
+    .product-img.event-img {
+      aspect-ratio: 4 / 3;
+      height: auto;
+      min-height: 0;
+    }
+    .product-img::after {
+      content: attr(data-label);
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: rgba(5, 62, 131, 0.85);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .product-img-placeholder {
+      font-size: 3.5rem;
+      opacity: 0.5;
+    }
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .product-body {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-body h3 {
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .product-body p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      flex: 1;
+      margin-bottom: 20px;
+    }
+    .product-body .btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 0.9rem;
+    }
+
+    /* ========== QUALITY ========== */
+    .quality {
+      background: #f8fafc;
+      padding: 80px 0;
+    }
+    .quality-board {
+      margin-top: 30px;
+      background: linear-gradient(145deg, #f5fbff 0%, #e8f2f8 100%);
+      border: 1px solid rgba(10, 91, 181, 0.28);
+      border-radius: 20px;
+      padding: 14px 18px 28px;
+      box-shadow: 0 18px 42px rgba(5, 62, 131, 0.12);
+    }
+    .quality-board-header {
+      background: linear-gradient(135deg, #073d73 0%, #0a5ba7 100%);
+      color: #fff;
+      text-align: center;
+      font-size: clamp(1.3rem, 2vw, 2rem);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-radius: 10px;
+      padding: 14px 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 18px rgba(5, 62, 131, 0.16);
+    }
+    .quality-process {
+      counter-reset: process-stage;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .quality-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: nowrap;
+    }
+    .process-card {
+      width: 170px;
+      min-height: 150px;
+      background: linear-gradient(145deg, #0a5ba7 0%, #073d73 100%);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 22px 10px 14px;
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(5, 62, 131, 0.22), inset 0 0 0 1px rgba(255,255,255,0.14);
+      position: relative;
+      counter-increment: process-stage;
+      transition: var(--transition);
+    }
+    .process-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 14px 26px rgba(5, 62, 131, 0.28);
+    }
+    .process-card::before {
+      content: counter(process-stage, decimal-leading-zero);
+      position: absolute;
+      top: 9px;
+      left: 10px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.63rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+    .process-card .icon {
+      width: 68px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+    .process-card svg {
+      width: 100%;
+      height: 100%;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .process-card .label {
+      font-size: 0.77rem;
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      max-width: 120px;
+    }
+    .process-arrow {
+      font-size: 2.1rem;
+      color: #fff;
+      line-height: 1;
+      opacity: 0.8;
+      transform: translateY(-8px);
+    }
+    .quality-row + .quality-row {
+      position: relative;
+      margin-top: 18px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(10, 91, 181, 0.2);
+    }
+    .quality-row + .quality-row::before {
+      content: 'CONTINUE PROCESS';
+      position: absolute;
+      top: -0.55rem;
+      left: 50%;
+      padding: 0 12px;
+      background: #edf6fb;
+      color: rgba(5, 62, 131, 0.6);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      transform: translateX(-50%);
+    }
+
+    @media (max-width: 980px) {
+      .quality-row {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .process-arrow {
+        display: none;
+      }
+      .process-card {
+        width: calc(50% - 12px);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .quality {
+        padding: 60px 0;
+      }
+      .process-card {
+        width: 100%;
+      }
+      .quality-row {
+        position: relative;
+        gap: 22px;
+      }
+      .quality-row .process-card:not(:last-child)::after {
+        content: '↓';
+        position: absolute;
+        bottom: -24px;
+        left: 50%;
+        color: var(--primary);
+        font-size: 1.3rem;
+        font-weight: 700;
+        transform: translateX(-50%);
+      }
+      .quality-row + .quality-row {
+        margin-top: 28px;
+        padding-top: 0;
+        border-top: 0;
+      }
+      .quality-row + .quality-row::before {
+        display: none;
+      }
+      .quality-board {
+        padding: 12px 12px 18px;
+      }
+    }
+
+    /* ========== WHY US ========== */
+    .why {
+      background: linear-gradient(180deg, var(--ice-blue-soft) 0%, white 100%);
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .why-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border: 1px solid rgba(5, 62, 131, 0.06);
+    }
+    .why-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(5, 62, 131, 0.15);
+    }
+    .why-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--primary);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .why-icon svg {
+      width: 30px;
+      height: 30px;
+      fill: none;
+      stroke: #fff;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.8;
+    }
+    .why-card h3 {
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .why-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* ========== WHO WE SERVE ========== */
+    .serve {
+      background: var(--pure-white);
+    }
+    .serve-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .serve-card {
+      background: var(--ice-blue-soft);
+      border-radius: var(--radius-sm);
+      padding: 28px 24px;
+      text-align: center;
+      transition: var(--transition);
+      border: 1px solid transparent;
+    }
+    .serve-card:hover {
+      background: white;
+      box-shadow: var(--shadow);
+      border-color: rgba(5, 62, 131, 0.1);
+      transform: translateY(-4px);
+    }
+    .serve-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 14px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary);
+    }
+    .serve-icon svg {
+      width: 34px;
+      height: 34px;
+      fill: none;
+      stroke: #fff;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.7;
+    }
+    .serve-card h3 {
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .serve-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ========== DELIVERY ========== */
+    .delivery {
+      background: linear-gradient(160deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .delivery::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .delivery-content {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .delivery h2 {
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      margin-bottom: 16px;
+    }
+    .delivery p {
+      opacity: 0.9;
+      margin-bottom: 24px;
+      font-size: 1.05rem;
+    }
+    .delivery-features {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(180px, 1fr));
+      gap: 10px 18px;
+      margin: 0 0 12px;
+      padding: 0;
+      max-width: 620px;
+    }
+    .delivery-features-secondary {
+      grid-template-columns: 1fr;
+      margin-bottom: 0;
+    }
+    .delivery-feat {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      list-style: none;
+      line-height: 1.4;
+      margin: 0;
+      padding: 0;
+      min-height: 28px;
+    }
+    .delivery-feat svg {
+      width: 20px;
+      height: 20px;
+      flex: 0 0 20px;
+      fill: none;
+      stroke: rgba(255,255,255,0.9);
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .delivery-cta-box {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .delivery-cta-box h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+    .delivery-cta-box p {
+      opacity: 0.85;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+    .delivery-note {
+      margin-top: 24px;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    /* ========== HOW TO ORDER ========== */
+    .how {
+      background: var(--ice-blue-soft);
+    }
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 48px;
+    }
+    .how-step {
+      text-align: center;
+      position: relative;
+    }
+    .how-step-num {
+      width: 64px;
+      height: 64px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0 auto 20px;
+      box-shadow: 0 8px 24px rgba(5, 62, 131, 0.25);
+    }
+    .how-step h3 {
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .how-step p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .how-cta {
+      text-align: center;
+    }
+
+    /* ========== BRAND PROMISE ========== */
+    .promise {
+      background-image: linear-gradient(160deg, rgba(3,42,90,0.92) 0%, rgba(5,62,131,0.78) 50%, rgba(10,91,181,0.68) 100%), url('assets/premium-ice-cubes.png');
+      background-size: cover;
+      background-position: center 58%;
+      background-repeat: no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .promise::before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+    .promise-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .promise h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    .promise p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* ========== FAQ ========== */
+    .faq {
+      background: var(--pure-white);
+    }
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--soft-gray);
+    }
+    .faq-question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      text-align: left;
+      transition: var(--transition);
+    }
+    .faq-question:hover { color: var(--primary); }
+    .faq-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--ice-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--primary);
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+    .faq-item.active .faq-icon {
+      background: var(--primary);
+      color: white;
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding-bottom: 22px;
+    }
+    .faq-answer p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    /* ========== CONTACT ========== */
+    .contact {
+      background: linear-gradient(180deg, var(--ice-blue-soft) 0%, white 100%);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+      gap: 48px;
+      align-items: start;
+    }
+    .contact-info h2 {
+      font-size: clamp(2rem, 3.5vw, 2.6rem);
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .contact-info > p {
+      color: var(--text-muted);
+      margin-bottom: 36px;
+    }
+    .contact-blocks {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .contact-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 20px;
+      background: white;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 4px 16px rgba(5, 62, 131, 0.06);
+      flex-shrink: 0;
+    }
+    .contact-block-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      color: #fff;
+    }
+    .contact-block-icon svg,
+    .social-link svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .contact-block-icon img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+    }
+    .wa-icon {
+      background: var(--primary);
+      border-radius: 12px;
+    }
+    .wa-icon img,
+    .social-link.wa-social img {
+      display: block;
+      object-fit: contain;
+    }
+    .wa-icon img {
+      width: 22px;
+      height: 22px;
+      filter: brightness(0) invert(1);
+    }
+    .social-link.wa-social {
+      background: rgba(255,255,255,0.1);
+    }
+    .social-link.wa-social img {
+      width: 22px;
+      height: 22px;
+      filter: brightness(0) invert(1);
+    }
+    .contact-block h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+    .contact-block p {
+      font-weight: 600;
+      color: var(--text-dark);
+      font-size: 0.95rem;
+    }
+    .contact-form-wrap {
+      background: white;
+      border-radius: var(--radius);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+    .contact-form-wrap h3 {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 24px;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 12px 16px;
+      border: 1.5px solid var(--soft-gray);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      transition: var(--transition);
+      background: var(--white);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(5, 62, 131, 0.12);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .form-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .form-actions .btn { width: 100%; }
+    .form-status {
+      display: none;
+      padding: 12px 14px;
+      margin-top: 14px;
+      border-radius: var(--radius-sm);
+      background: #e7f7ee;
+      color: #146c3a;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .form-status.show { display: block; }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      background: var(--navy);
+      color: white;
+      padding: 64px 0 32px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand .logo-img {
+      height: 64px;
+      margin: 0 0 14px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      object-position: left center;
+      align-self: flex-start;
+      filter: brightness(0) invert(1);
+    }
+    .footer-brand p {
+      opacity: 0.75;
+      font-size: 0.95rem;
+      max-width: 280px;
+      margin: 0 0 20px;
+      text-align: left;
+    }
+    .footer-social {
+      display: flex;
+      gap: 12px;
+      justify-content: flex-start;
+    }
+    .social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      font-size: 1.1rem;
+    }
+    .social-link:hover {
+      background: var(--primary);
+      transform: translateY(-2px);
+    }
+    .footer h4 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+      opacity: 0.6;
+    }
+    .footer-links a {
+      display: block;
+      padding: 6px 0;
+      opacity: 0.8;
+      transition: var(--transition);
+      font-size: 0.95rem;
+    }
+    .footer-links a:hover {
+      opacity: 1;
+      color: #7EB8F0;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    /* ========== ANIMATIONS ========== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1024px) {
+      .hero-content { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+      .hero-desc { margin-left: auto; margin-right: auto; }
+      .hero-ctas { justify-content: center; }
+      .hero-visual { order: -1; }
+      .hero-ctas .btn { min-width: 0; width: auto; }
+      .hero-logo-wrap { max-width: 280px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-visual { aspect-ratio: 1086 / 1448; max-height: none; }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .serve-grid { grid-template-columns: repeat(3, 1fr); }
+      .delivery-content { grid-template-columns: 1fr; }
+      .how-steps { grid-template-columns: 1fr; gap: 40px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .quality-board { padding: 12px 12px 18px; }
+      .quality-row { flex-wrap: wrap; }
+      .process-card { width: calc(50% - 12px); }
+      .process-arrow { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .logo-img { height: 44px; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .products-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .serve-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-features { grid-template-columns: 1fr; }
+      .delivery-features { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      section { padding: 70px 0; }
+      .hero { padding: 100px 0 60px; min-height: auto; }
+      .promise { padding: 80px 0; }
+      .quality-row { gap: 10px; }
+      .process-card {
+        width: 100%;
+        flex: 0 0 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .hero h1 { font-size: clamp(2.3rem, 11vw, 3rem); }
+      .trust-grid { grid-template-columns: 1fr 1fr; }
+      .serve-grid { grid-template-columns: 1fr; }
+      .btn { padding: 12px 22px; font-size: 0.9rem; }
+      .contact-form-wrap { padding: 28px 20px; }
+      .form-actions { flex-direction: column; }
+      .form-actions .btn { width: 100%; }
+      .quality-board-header { font-size: 1.2rem; }
+      .process-card { min-height: 130px; }
+      .process-card .label { max-width: 100%; font-size: 0.68rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo-link">
+        <img src="assets/top-logo.png" alt="HIMALAYAN ICE Logo" class="logo-img" />
+      </a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#quality">Quality</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#why">Why Us</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn btn-primary nav-cta">ORDER ICE</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#quality">Quality</a>
+    <a href="#delivery">Delivery</a>
+    <a href="#why">Why Us</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="btn btn-primary" style="margin-top:24px;width:100%;">ORDER ICE</a>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-brand">HIMALAYAN ICE</div>
+          <h1>
+            <span>CUBES DELIVERY</span>
+            <span>ITAHARI, NEPAL</span>
+          </h1>
+          <p class="hero-sub">PREMIUM ICE. DELIVERED FRESH.</p>
+          <p class="hero-desc">Crystal-clear, hygienically produced ice for cafés, restaurants, hotels, bars, events, retailers, and homes in Itahari.</p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary">ORDER ICE</a>
+            <a href="#products" class="btn btn-secondary">EXPLORE OUR ICE</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-logo-wrap" style="display:none;">
+            <div class="ice-glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRUST BAR ========== -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2.5c-3.2 3.6-6 6.2-6 10.2A6 6 0 0 0 18 12.7c0-4-2.8-6.6-6-10.2Z"/><path d="M10.3 13.8c.8.9 1.4 1.6 1.7 2.9"/><path d="M9.5 17.4h5"/></svg>
+          </div>
+          <span>100% Purified Water</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.9 4.9l2.8 2.8"/><path d="M16.3 16.3l2.8 2.8"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.9 19.1l2.8-2.8"/><path d="M16.3 7.7l2.8-2.8"/><path d="M8 12a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z"/></svg>
+          </div>
+          <span>Crystal Clear Ice</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3.5 18 6v5c0 3.7-2.3 6.9-6 8.5-3.7-1.6-6-4.8-6-8.5v-5l6-2.5Z"/><path d="m9.5 12 1.5 1.5 3.5-4"/></svg>
+          </div>
+          <span>Hygienic Production</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 8h11v8H3z"/><path d="M14 10h4l3 3v3h-7"/><path d="M7 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm9 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
+          </div>
+          <span>Reliable Delivery</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid fade-up">
+        <div class="about-content">
+          <h2>ICE, MADE DIFFERENT.</h2>
+          <p>HIMALAYAN ICE is built around one simple idea — great drinks deserve great ice.</p>
+          <p>We manufacture premium ice with a strong focus on water quality, hygiene, consistency, packaging, and dependable service.</p>
+          <p>From everyday café operations to large events, our goal is to provide ice that businesses and customers can trust.</p>
+          <div class="about-features">
+            <div class="about-feature">Premium ice production</div>
+            <div class="about-feature">Hygienic handling</div>
+            <div class="about-feature">Consistent quality</div>
+            <div class="about-feature">Reliable supply</div>
+            <div class="about-feature">Professional service</div>
+            <div class="about-feature">Crystal clarity</div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <img src="assets/about-himalayan-mountain.png" alt="Himalayan Ice packaged ice against a Himalayan mountain backdrop" class="about-image" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRODUCTS ========== -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">OUR ICE</h2>
+        <p class="section-subtitle">Crystal-clear ice for every occasion.</p>
+      </div>
+      <div class="products-grid">
+        <div class="product-card fade-up">
+          <div class="product-img premium-img" data-label="Cubes">
+            <img src="assets/premium-ice-cubes.png" alt="Premium crystal-clear ice cubes" />
+          </div>
+          <div class="product-body">
+            <h3>PREMIUM ICE CUBES</h3>
+            <p>Crystal-clear ice designed for refreshing beverages, cafés, restaurants, bars, and everyday use.</p>
+            <a href="https://wa.me/9779769694383" class="btn btn-primary" target="_blank" rel="noopener">Order Now</a>
+          </div>
+        </div>
+        <div class="product-card fade-up">
+          <div class="product-img packaged-img" data-label="Packaged">
+            <img src="assets/packaged-ice.png" alt="Himalayan Ice packaged ice bag with ice cubes" />
+          </div>
+          <div class="product-body">
+            <h3>PACKAGED ICE</h3>
+            <p>Hygienically packed ice designed for convenient storage, transport, retail, and food-service use.</p>
+            <a href="https://wa.me/9779769694383" class="btn btn-primary" target="_blank" rel="noopener">Order Now</a>
+          </div>
+        </div>
+        <div class="product-card fade-up">
+          <div class="product-img bulk-img" data-label="Bulk">
+            <img src="assets/bulk-ice-supply.png" alt="Himalayan Ice bulk ice supply for businesses and events" />
+          </div>
+          <div class="product-body">
+            <h3>BULK ICE SUPPLY</h3>
+            <p>Reliable bulk ice supply for restaurants, hotels, caterers, retailers, events, and commercial customers.</p>
+            <a href="https://wa.me/9779769694383" class="btn btn-primary" target="_blank" rel="noopener">Order Now</a>
+          </div>
+        </div>
+        <div class="product-card fade-up">
+          <div class="product-img event-img" data-label="Events">
+            <img src="assets/event-ice.png" alt="Himalayan Ice event ice supply for weddings and celebrations" />
+          </div>
+          <div class="product-body">
+            <h3>EVENT ICE</h3>
+            <p>Dependable ice supply for weddings, parties, corporate events, festivals, catering, and special occasions.</p>
+            <a href="https://wa.me/9779769694383" class="btn btn-primary" target="_blank" rel="noopener">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== QUALITY ========== -->
+  <section class="quality" id="quality">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">QUALITY YOU CAN SEE.</h2>
+        <p class="section-subtitle">A disciplined process designed for purity, clarity and consistency.</p>
+      </div>
+
+      <div class="quality-board fade-up">
+        <div class="quality-board-header">Water Purification Process</div>
+
+        <div class="quality-process">
+          <div class="quality-row">
+            <div class="process-card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <path d="M32 8c-8 10-18 18-18 29a18 18 0 1 0 36 0c0-11-10-19-18-29Z"/>
+                  <path d="M21 29c4 4 7 7 11 13M30 22c4 5 8 8 13 14"/>
+                </svg>
+              </div>
+              <div class="label">RAW WATER</div>
+            </div>
+            <div class="process-arrow">→</div>
+            <div class="process-card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <path d="M12 30h40"/>
+                  <path d="M18 18h28v28H18z"/>
+                  <path d="M18 30h28M22 18v28M42 18v28"/>
+                  <path d="M28 12v-4M36 12v-4"/>
+                </svg>
+              </div>
+              <div class="label">PRE-FILTRATION</div>
+            </div>
+            <div class="process-arrow">→</div>
+            <div class="process-card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <path d="M18 18h28v28H18z"/>
+                  <path d="M18 28h28M18 34h28"/>
+                  <path d="M24 18v28M40 18v28"/>
+                  <path d="M22 40h20"/>
+                </svg>
+              </div>
+              <div class="label">SEDIMENT FILTRATION</div>
+            </div>
+            <div class="process-arrow">→</div>
+            <div class="process-card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <path d="M18 24h28v22H18z"/>
+                  <path d="M20 20h24l-4-8H24z"/>
+                  <path d="M26 32h12M32 26v12"/>
+                </svg>
+              </div>
+              <div class="label">CARBON FILTRATION</div>
+            </div>
+          </div>
+
+          <div class="quality-row">
+            <div class="process-card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <path d="M18 18h28v28H18z"/>
+                  <path d="M18 42h28M22 22h20M28 28h8M30 34h4"/>
+                  <path d="M16 10h32M20 16h24"/>
+                </svg>
+              </div>
+              <div class="label">FINE / MICRON FILTRATION</div>
+            </div>
+            <div class="process-arrow">→</div>
+            <div class="process-card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <path d="M32 12a20 20 0 1 1 0 40 20 20 0 0 1 0-40Z"/>
+                  <path d="M32 20v12l8 8"/>
+                  <path d="M20 32h12"/>
+                </svg>
+              </div>
+              <div class="label">PURIFICATION</div>
+            </div>
+            <div class="process-arrow">→</div>
+            <div class="process-card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <path d="M26 10h12v50H26zM16 18h32v30H16z"/>
+                  <path d="M26 24h12M26 30h12M26 36h12"/>
+                  <path d="M12 18h4M48 18h4M12 48h4M48 48h4"/>
+                </svg>
+              </div>
+              <div class="label">ICE MAKING</div>
+            </div>
+            <div class="process-arrow">→</div>
+            <div class="process-card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <path d="M18 22h28v24H18z"/>
+                  <path d="M22 18h20l4 8H18z"/>
+                  <path d="M26 30h12M26 36h12M24 44h16"/>
+                </svg>
+              </div>
+              <div class="label">HYGIENIC PACKAGING</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY HIMALAYAN ICE ========== -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">WHY CHOOSE HIMALAYAN ICE?</h2>
+        <p class="section-subtitle">Built for businesses and customers who care about what goes into the glass.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card fade-up">
+          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 8 6-8 12L4 9l8-6Z"/><path d="m4 9 8 2 8-2M12 3v8"/></svg></div>
+          <h3>Crystal Clear</h3>
+          <p>Clean-looking, premium ice designed to elevate every beverage.</p>
+        </div>
+        <div class="why-card fade-up">
+          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.2 6 11a6 6 0 0 1-12 0c0-4.8 6-11 6-11Z"/><path d="m9 15 2 2 4-4"/></svg></div>
+          <h3>Hygienic</h3>
+          <p>Strong focus on cleanliness and responsible handling.</p>
+        </div>
+        <div class="why-card fade-up">
+          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.5 9A7 7 0 0 1 19 7M17.5 15A7 7 0 0 1 5 17"/></svg></div>
+          <h3>Consistent</h3>
+          <p>Reliable quality and consistent product presentation.</p>
+        </div>
+        <div class="why-card fade-up">
+          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2v20M4.9 6l14.2 12M19.1 6 4.9 18M5 12h14"/><path d="m12 2 2 3M12 2 10 5M12 22l2-3M12 22l-2-3"/></svg></div>
+          <h3>Fresh Supply</h3>
+          <p>Ice produced and supplied for ongoing customer needs.</p>
+        </div>
+        <div class="why-card fade-up">
+          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h1M15 8h1M8 12h1M15 12h1M8 16h1M15 16h1"/></svg></div>
+          <h3>Business Ready</h3>
+          <p>Built for cafés, restaurants, hotels, bars, retailers, caterers and events.</p>
+        </div>
+        <div class="why-card fade-up">
+          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 12 3 3a2 2 0 0 0 3-3l-2-2"/><path d="m8 12-2 2a2 2 0 0 1-3-3l4-4a3 3 0 0 1 4 0l1 1"/><path d="m16 12 2 2a2 2 0 0 0 3-3l-4-4a3 3 0 0 0-4 0l-1 1"/></svg></div>
+          <h3>Reliable Service</h3>
+          <p>Professional ordering and delivery experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHO WE SERVE ========== -->
+  <section class="serve" id="serve">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">MADE FOR EVERY BUSINESS THAT SERVES COLD.</h2>
+        <p class="section-subtitle">From neighborhood cafés to large-scale events — we keep the ice flowing.</p>
+      </div>
+      <div class="serve-grid">
+        <div class="serve-card fade-up">
+          <div class="serve-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8ZM16 10h2a3 3 0 0 1 0 6h-2M2 21h17"/></svg></div>
+          <h3>Cafés</h3>
+          <p>Consistent ice for daily service.</p>
+        </div>
+        <div class="serve-card fade-up">
+          <div class="serve-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 3v8M2 3v5a2 2 0 0 0 4 0V3M4 11v10M15 3v18M15 3c4 2 4 6 0 8"/></svg></div>
+          <h3>Restaurants</h3>
+          <p>Premium ice for dining experiences.</p>
+        </div>
+        <div class="serve-card fade-up">
+          <div class="serve-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M2 21h20M8 8h1M15 8h1M8 12h1M15 12h1M8 16h1M15 16h1"/></svg></div>
+          <h3>Hotels</h3>
+          <p>Reliable supply for hospitality.</p>
+        </div>
+        <div class="serve-card fade-up">
+          <div class="serve-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 4 7 8 7-8H5ZM12 12v7M8 21h8M7 4l2 2M17 4l-2 2"/></svg></div>
+          <h3>Bars</h3>
+          <p>Crystal-clear cubes for cocktails.</p>
+        </div>
+        <div class="serve-card fade-up">
+          <div class="serve-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 .5-8A6 6 0 0 0 6 8a5 5 0 0 0 1 10Z"/><path d="M9 14h6M12 12v5"/></svg></div>
+          <h3>Cloud Kitchens</h3>
+          <p>Dependable ice for delivery ops.</p>
+        </div>
+        <div class="serve-card fade-up">
+          <div class="serve-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 13h18M4 13l2 7h12l2-7M5 10h14l-2-4H7l-2 4ZM8 16h8"/></svg></div>
+          <h3>Caterers</h3>
+          <p>Bulk ice for large service.</p>
+        </div>
+        <div class="serve-card fade-up">
+          <div class="serve-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21 12 5l8 16M7 15h10M9 11h6M12 5V2M5 5 3 3M19 5l2-2"/></svg></div>
+          <h3>Events</h3>
+          <p>Weddings, parties & festivals.</p>
+        </div>
+        <div class="serve-card fade-up">
+          <div class="serve-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 10h18l-2-6H5l-2 6ZM4 10v10h16V10M8 20v-6h4v6M3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/></svg></div>
+          <h3>Retail Stores</h3>
+          <p>Packaged ice for shelves.</p>
+        </div>
+        <div class="serve-card fade-up">
+          <div class="serve-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 11 9-8 9 8M5 9v11h14V9M9 20v-6h6v6"/></svg></div>
+          <h3>Homes</h3>
+          <p>Quality ice for everyday use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DELIVERY ========== -->
+  <section class="delivery" id="delivery">
+    <div class="container">
+      <div class="delivery-content fade-up">
+        <div>
+          <h2>ICE WHEN YOU NEED IT.</h2>
+          <p>We understand that running out of ice can interrupt an entire service. HIMALAYAN ICE is focused on making ice ordering simple, dependable, and convenient.</p>
+          <ul class="delivery-features">
+            <li class="delivery-feat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 9-12h-7l1-8Z"/></svg>Fast Response</li>
+            <li class="delivery-feat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h13v10H3zM16 10h3l2 3v4h-5zM7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM18 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>Reliable Supply</li>
+            <li class="delivery-feat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v5c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6l-8-3Z"/><path d="m8.5 12 2.2 2.2 4.8-4.8"/></svg>Professional Handling</li>
+            <li class="delivery-feat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="9" cy="6" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="10" cy="18" r="2"/></svg>Flexible Orders</li>
+          </ul>
+
+        </div>
+        <div class="delivery-cta-box">
+          <h3>NEED ICE FOR YOUR BUSINESS?</h3>
+          <p>Tell us what you need and we’ll take care of the rest.</p>
+          <a href="#contact" class="btn btn-white">REQUEST A DELIVERY</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW TO ORDER ========== -->
+  <section class="how" id="order">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">HOW TO ORDER</h2>
+        <p class="section-subtitle">Three simple steps to get premium ice delivered.</p>
+      </div>
+      <div class="how-steps fade-up">
+        <div class="how-step">
+          <div class="how-step-num">01</div>
+          <h3>CHOOSE YOUR ICE</h3>
+          <p>Select the product and quantity you need.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">02</div>
+          <h3>SEND YOUR ORDER</h3>
+          <p>Contact HIMALAYAN ICE through WhatsApp, phone, or the inquiry form.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">03</div>
+          <h3>GET YOUR ICE</h3>
+          <p>Our team confirms your order and delivery details.</p>
+        </div>
+      </div>
+      <div class="how-cta fade-up">
+        <a href="https://wa.me/9779769694383" class="btn btn-primary" target="_blank" rel="noopener">ORDER NOW</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BRAND PROMISE ========== -->
+  <section class="promise">
+    <div class="container">
+      <div class="promise-content fade-up">
+        <h2>THE ICE IN YOUR GLASS SHOULD BE AS GOOD AS WHAT'S IN IT.</h2>
+        <p>HIMALAYAN ICE — premium ice made for better drinks, better service, and better experiences.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+        <p class="section-subtitle">Everything you need to know about ordering with HIMALAYAN ICE.</p>
+      </div>
+      <div class="faq-list fade-up">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Where can I order HIMALAYAN ICE?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>You can order directly through our website inquiry form, WhatsApp, or by calling us. We currently serve Itahari, Sunsari. Contact us to confirm availability in your location.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What types of ice do you supply?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We supply premium ice cubes, packaged ice, bulk ice for commercial customers, and event ice. All our ice is produced with a focus on clarity, hygiene and consistency.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do you supply ice to cafés and restaurants?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Cafés, restaurants, hotels, bars, cloud kitchens and catering businesses form a core part of our customer base. We are set up to support regular commercial supply needs.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I order ice for events?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. We supply ice for weddings, parties, corporate events, festivals and catering. Please share your event date, location and estimated quantity so we can plan accordingly.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I order ice in bulk?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. We offer bulk ice supply for restaurants, hotels, retailers, caterers and large events. Reach out with your requirements and we will confirm availability and arrangements.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How do I place an order?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>You can fill out the inquiry form on this website, message us on WhatsApp, or call us directly. Include the type of ice, quantity, delivery location and preferred date for the fastest response.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do you deliver?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, we offer delivery. Delivery coverage, timing and any minimum order requirements depend on your location. Please contact us with your address and we will confirm the details. Current delivery area: Itahari, Sunsari.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How should I store the ice?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Store ice in a clean, covered container in a freezer or insulated ice chest. Keep it away from strong-smelling foods and handle it with clean utensils or scoops to maintain hygiene.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info fade-up">
+          <h2>READY TO ORDER?</h2>
+          <p>Premium ice for your business, event, or home. Send your requirements and we will confirm the details.</p>
+          <div class="contact-blocks">
+            <a href="tel:+9779769694383" class="contact-block">
+              <div class="contact-block-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/></svg>
+              </div>
+              <div>
+                <h4>Phone</h4>
+                <p>+977 9769694383</p>
+              </div>
+            </a>
+            <a href="https://wa.me/9779769694383" class="contact-block" target="_blank" rel="noopener">
+              <div class="contact-block-icon wa-icon" aria-hidden="true">
+                <img src="assets/WhatsApp_Logo_green.svg" alt="WhatsApp" />
+              </div>
+              <div>
+                <h4>WhatsApp</h4>
+                <p>+977 9769694383</p>
+              </div>
+            </a>
+            <div class="contact-block">
+              <div class="contact-block-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Z"/><path d="M4 8l8 6 8-6"/></svg>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <p>info.himalayanice@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-block">
+              <div class="contact-block-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              </div>
+              <div>
+                <h4>Location</h4>
+                <p>Itahari, Sunsari</p>
+              </div>
+            </div>
+            <div class="contact-block">
+              <div class="contact-block-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3 12h18"/><path d="M12 3.5a15 15 0 0 1 0 17"/><path d="M12 3.5a15 15 0 0 0 0 17"/></svg>
+              </div>
+              <div>
+                <h4>Social</h4>
+                <p>Himalayanice.np</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap fade-up">
+          <h3>REQUEST ICE</h3>
+          <form id="orderForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="orderName">Name</label>
+                <input id="orderName" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label for="orderBusiness">Business / Organization</label>
+                <input id="orderBusiness" name="business" type="text" autocomplete="organization" />
+              </div>
+              <div class="form-group">
+                <label for="orderPhone">Phone</label>
+                <input id="orderPhone" name="phone" type="tel" autocomplete="tel" required />
+              </div>
+              <div class="form-group">
+                <label for="orderWhatsapp">WhatsApp</label>
+                <input id="orderWhatsapp" name="whatsapp" type="tel" autocomplete="tel" />
+              </div>
+              <div class="form-group full">
+                <label for="orderLocation">Delivery location</label>
+                <input id="orderLocation" name="location" type="text" autocomplete="street-address" required />
+              </div>
+              <div class="form-group">
+                <label for="orderProduct">Product</label>
+                <select id="orderProduct" name="product" required>
+                  <option value="" selected disabled>Select ice type</option>
+                  <option>Premium Ice Cubes</option>
+                  <option>Packaged Ice</option>
+                  <option>Bulk Ice</option>
+                  <option>Event Ice</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="orderQuantity">Quantity</label>
+                <input id="orderQuantity" name="quantity" type="text" placeholder="e.g. 10 bags" required />
+              </div>
+              <div class="form-group">
+                <label for="orderDate">Preferred delivery date</label>
+                <input id="orderDate" name="date" type="date" />
+              </div>
+              <div class="form-group">
+                <label for="orderTime">Preferred delivery time</label>
+                <input id="orderTime" name="time" type="time" />
+              </div>
+              <div class="form-group full">
+                <label for="orderMessage">Additional message</label>
+                <textarea id="orderMessage" name="message" placeholder="Tell us anything useful about your order"></textarea>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">REQUEST ICE</button>
+              <a href="https://wa.me/9779769694383" class="btn btn-whatsapp" target="_blank" rel="noopener">WHATSAPP US</a>
+              <a href="tel:+9779769694383" class="btn btn-secondary">CALL NOW</a>
+            </div>
+            <div class="form-status" id="formStatus" role="status" aria-live="polite">Your request is ready. WhatsApp will open with your order details.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="HIMALAYAN ICE" class="logo-img" />
+          <p>Himalayan Ice<br>Pure Ice, Pure Trust.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/himalayanice.np/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61593338361705" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M14 8h2V4h-2a4 4 0 0 0-4 4v2H8v4h2v6h4v-6h2.7l.3-4H14V8Z"/></svg>
+            </a>
+            <a href="https://wa.me/9779769694383" class="social-link wa-social" aria-label="WhatsApp" target="_blank" rel="noopener">
+              <img src="assets/WhatsApp_Logo_green.svg" alt="WhatsApp" />
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Navigate</h4>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#quality">Quality</a>
+            <a href="#delivery">Delivery</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <a href="tel:+9779769694383">+977 9769694383</a>
+            <a href="mailto:info.himalayanice@gmail.com">info.himalayanice@gmail.com</a>
+            <a href="#contact">Itahari, Sunsari</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 HIMALAYAN ICE. All Rights Reserved.</span>
+        <span>Himalayan Ice</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ========== NAVBAR SCROLL ==========
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // ========== MOBILE MENU ==========
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+
+    function toggleMenu() {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
+      mobileOverlay.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    mobileOverlay.addEventListener('click', toggleMenu);
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (mobileMenu.classList.contains('open')) toggleMenu();
+      });
+    });
+
+    // ========== ACTIVE NAV LINK ==========
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (scrollY >= top) current = section.getAttribute('id');
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+      });
+    });
+
+    // ========== FAQ ACCORDION ==========
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isActive) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // ========== ORDER FORM ==========
+    const orderMessage = [
+      'Hello HIMALAYAN ICE, I would like to place an order.',
+      '',
+      'Product:',
+      'Quantity:',
+      'Location:',
+      'Preferred delivery time:'
+    ].join('\n');
+    document.querySelectorAll('a[href="https://wa.me/9779769694383"]').forEach(link => {
+      link.href = `https://wa.me/9779769694383?text=${encodeURIComponent(orderMessage)}`;
+    });
+
+    document.querySelectorAll('.nav-cta, .mobile-menu .btn-primary, .hero-ctas .btn-primary, .delivery-cta-box .btn-white').forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.setTimeout(() => document.getElementById('orderName').focus(), 450);
+      });
+    });
+
+    const orderForm = document.getElementById('orderForm');
+    const formStatus = document.getElementById('formStatus');
+    orderForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const values = new FormData(orderForm);
+      const message = [
+        'Hello HIMALAYAN ICE, I would like to place an ice order.',
+        '',
+        `Name: ${values.get('name') || ''}`,
+        `Business: ${values.get('business') || ''}`,
+        `Phone: ${values.get('phone') || ''}`,
+        `WhatsApp: ${values.get('whatsapp') || ''}`,
+        `Product: ${values.get('product') || ''}`,
+        `Quantity: ${values.get('quantity') || ''}`,
+        `Location: ${values.get('location') || ''}`,
+        `Preferred delivery date: ${values.get('date') || ''}`,
+        `Preferred delivery time: ${values.get('time') || ''}`,
+        `Additional message: ${values.get('message') || ''}`
+      ].join('\n');
+      formStatus.classList.add('show');
+      window.open(`https://wa.me/9779769694383?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+    });
+
+    // ========== FADE-UP ANIMATION ==========
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  </script>
+</body>
+</html>
