@@ -1291,6 +1291,25 @@
       resize: vertical;
       min-height: 100px;
     }
+    .form-group.has-error input,
+    .form-group.has-error select,
+    .form-group.has-error textarea {
+      border-color: #c94b4b;
+      box-shadow: 0 0 0 3px rgba(201, 75, 75, 0.1);
+    }
+    .field-error {
+      display: none;
+      color: #b33c3c;
+      font-size: 0.75rem;
+      line-height: 1.35;
+    }
+    .form-group.has-error .field-error { display: block; }
+    .message-meta {
+      display: flex;
+      justify-content: flex-end;
+      color: var(--text-muted);
+      font-size: 0.72rem;
+    }
     .form-actions {
       display: flex;
       flex-direction: column;
@@ -2056,53 +2075,63 @@
         </div>
         <div class="contact-form-wrap fade-up">
           <h3>REQUEST ICE</h3>
-          <form id="orderForm">
+          <form id="orderForm" novalidate>
             <div class="form-grid">
               <div class="form-group">
                 <label for="orderName">Name</label>
-                <input id="orderName" name="name" type="text" autocomplete="name" required />
+                <input id="orderName" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" aria-describedby="orderNameError" required />
+                <span class="field-error" id="orderNameError">Please enter your full name.</span>
               </div>
               <div class="form-group">
                 <label for="orderBusiness">Business / Organization</label>
-                <input id="orderBusiness" name="business" type="text" autocomplete="organization" />
+                <input id="orderBusiness" name="business" type="text" autocomplete="organization" maxlength="120" aria-describedby="orderBusinessError" />
+                <span class="field-error" id="orderBusinessError">Please enter your business name.</span>
               </div>
               <div class="form-group">
                 <label for="orderPhone">Phone</label>
-                <input id="orderPhone" name="phone" type="tel" autocomplete="tel" required />
+                <input id="orderPhone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="10" minlength="10" pattern="[0-9]{10}" aria-describedby="orderPhoneError" required />
+                <span class="field-error" id="orderPhoneError">Please enter a valid 10-digit phone number.</span>
               </div>
               <div class="form-group">
                 <label for="orderWhatsapp">WhatsApp</label>
-                <input id="orderWhatsapp" name="whatsapp" type="tel" autocomplete="tel" />
+                <input id="orderWhatsapp" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel" maxlength="10" minlength="10" pattern="[0-9]{10}" aria-describedby="orderWhatsappError" />
+                <span class="field-error" id="orderWhatsappError">Please enter a valid 10-digit WhatsApp number.</span>
               </div>
               <div class="form-group full">
                 <label for="orderLocation">Delivery location</label>
-                <input id="orderLocation" name="location" type="text" autocomplete="street-address" required />
+                <input id="orderLocation" name="location" type="text" autocomplete="street-address" minlength="5" maxlength="250" aria-describedby="orderLocationError" required />
+                <span class="field-error" id="orderLocationError">Please enter your delivery location.</span>
               </div>
               <div class="form-group">
                 <label for="orderProduct">Product</label>
-                <select id="orderProduct" name="product" required>
+                <select id="orderProduct" name="product" aria-describedby="orderProductError" required>
                   <option value="" selected disabled>Select ice type</option>
-                  <option>Premium Ice Cubes</option>
-                  <option>Packaged Ice</option>
-                  <option>Bulk Ice</option>
-                  <option>Event Ice</option>
+                  <option value="Premium Ice Cubes">Premium Ice Cubes</option>
+                  <option value="Packaged Ice">Packaged Ice</option>
+                  <option value="Bulk Ice">Bulk Ice</option>
+                  <option value="Event Ice">Event Ice</option>
                 </select>
+                <span class="field-error" id="orderProductError">Please select an ice product.</span>
               </div>
               <div class="form-group">
                 <label for="orderQuantity">Quantity</label>
-                <input id="orderQuantity" name="quantity" type="text" placeholder="e.g. 10 bags" required />
+                <input id="orderQuantity" name="quantity" type="number" inputmode="numeric" min="1" step="1" aria-describedby="orderQuantityError" placeholder="e.g. 10 bags" required />
+                <span class="field-error" id="orderQuantityError">Please enter a valid quantity.</span>
               </div>
               <div class="form-group">
                 <label for="orderDate">Preferred delivery date</label>
-                <input id="orderDate" name="date" type="date" />
+                <input id="orderDate" name="date" type="date" aria-describedby="orderDateError" />
+                <span class="field-error" id="orderDateError">Please select a valid delivery date.</span>
               </div>
               <div class="form-group">
                 <label for="orderTime">Preferred delivery time</label>
-                <input id="orderTime" name="time" type="time" />
+                <input id="orderTime" name="time" type="time" aria-describedby="orderTimeError" />
+                <span class="field-error" id="orderTimeError">Please select a preferred delivery time.</span>
               </div>
               <div class="form-group full">
                 <label for="orderMessage">Additional message</label>
-                <textarea id="orderMessage" name="message" placeholder="Tell us anything useful about your order"></textarea>
+                <textarea id="orderMessage" name="message" maxlength="500" aria-describedby="messageCount" placeholder="Tell us anything useful about your order"></textarea>
+                <div class="message-meta"><span id="messageCount">0 / 500</span></div>
               </div>
             </div>
             <div class="form-actions">
@@ -2246,25 +2275,113 @@
 
     const orderForm = document.getElementById('orderForm');
     const formStatus = document.getElementById('formStatus');
+    const fields = {
+      name: document.getElementById('orderName'),
+      business: document.getElementById('orderBusiness'),
+      phone: document.getElementById('orderPhone'),
+      whatsapp: document.getElementById('orderWhatsapp'),
+      location: document.getElementById('orderLocation'),
+      product: document.getElementById('orderProduct'),
+      quantity: document.getElementById('orderQuantity'),
+      date: document.getElementById('orderDate'),
+      time: document.getElementById('orderTime'),
+      message: document.getElementById('orderMessage')
+    };
+    const today = new Date();
+    const localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    fields.date.min = localDate;
+
+    function showFieldError(field, message) {
+      const group = field.closest('.form-group');
+      const error = group.querySelector('.field-error');
+      group.classList.toggle('has-error', Boolean(message));
+      field.setCustomValidity(message || '');
+      if (error && message) error.textContent = message;
+      return !message;
+    }
+
+    function validPhone(field, message) {
+      if (field.value.length !== 10 || !/^\d{10}$/.test(field.value) || field.dataset.formatInvalid === 'true') {
+        return showFieldError(field, message);
+      }
+      return showFieldError(field, '');
+    }
+
+    function validateField(field) {
+      const value = field.value.trim();
+      switch (field.name) {
+        case 'name':
+          return showFieldError(field, value.length < 2 || value.length > 80 || /^\d+$/.test(value) ? 'Please enter your full name.' : '');
+        case 'business':
+          return showFieldError(field, value.length > 120 ? 'Please enter your business name.' : '');
+        case 'phone':
+          return validPhone(field, 'Please enter a valid 10-digit phone number.');
+        case 'whatsapp':
+          return value === '' || validPhone(field, 'Please enter a valid 10-digit WhatsApp number.');
+        case 'location':
+          return showFieldError(field, value.length < 5 || value.length > 250 ? 'Please enter your delivery location.' : '');
+        case 'product':
+          return showFieldError(field, !['Premium Ice Cubes', 'Packaged Ice', 'Bulk Ice', 'Event Ice'].includes(field.value) ? 'Please select an ice product.' : '');
+        case 'quantity':
+          return showFieldError(field, !/^\d+$/.test(field.value) || Number(field.value) < 1 ? 'Please enter a valid quantity.' : '');
+        case 'date':
+          return showFieldError(field, field.value && field.value < localDate ? 'Please select a valid delivery date.' : '');
+        case 'time':
+          return showFieldError(field, field.value && !/^([01]\d|2[0-3]):[0-5]\d$/.test(field.value) ? 'Please select a preferred delivery time.' : '');
+        case 'message':
+          return showFieldError(field, field.value.length > 500 ? 'Please keep your message under 500 characters.' : '');
+        default:
+          return true;
+      }
+    }
+
+    [fields.phone, fields.whatsapp].forEach(field => {
+      field.addEventListener('input', () => {
+        const original = field.value;
+        const sanitized = original.replace(/\D/g, '').slice(0, 10);
+        field.value = sanitized;
+        field.dataset.formatInvalid = original !== sanitized ? 'true' : 'false';
+        validateField(field);
+      });
+      field.addEventListener('paste', () => window.setTimeout(() => validateField(field), 0));
+    });
+    fields.quantity.addEventListener('input', () => {
+      fields.quantity.value = fields.quantity.value.replace(/\D/g, '');
+      validateField(fields.quantity);
+    });
+    fields.message.addEventListener('input', () => {
+      document.getElementById('messageCount').textContent = `${fields.message.value.length} / 500`;
+      validateField(fields.message);
+    });
+    Object.values(fields).forEach(field => field.addEventListener('blur', () => validateField(field)));
+
     orderForm.addEventListener('submit', (event) => {
       event.preventDefault();
+      const orderedFields = Object.values(fields);
+      const valid = orderedFields.map(validateField);
+      const firstInvalid = orderedFields[valid.indexOf(false)];
+      if (firstInvalid) {
+        firstInvalid.focus();
+        formStatus.classList.remove('show');
+        return;
+      }
       const values = new FormData(orderForm);
-      const message = [
+      const messageLines = [
         'Hello HIMALAYAN ICE, I would like to place an ice order.',
         '',
-        `Name: ${values.get('name') || ''}`,
-        `Business: ${values.get('business') || ''}`,
-        `Phone: ${values.get('phone') || ''}`,
-        `WhatsApp: ${values.get('whatsapp') || ''}`,
-        `Product: ${values.get('product') || ''}`,
-        `Quantity: ${values.get('quantity') || ''}`,
-        `Location: ${values.get('location') || ''}`,
-        `Preferred delivery date: ${values.get('date') || ''}`,
-        `Preferred delivery time: ${values.get('time') || ''}`,
-        `Additional message: ${values.get('message') || ''}`
-      ].join('\n');
+        `Name: ${values.get('name').trim()}`,
+        values.get('business').trim() && `Business: ${values.get('business').trim()}`,
+        `Phone: ${values.get('phone')}`,
+        values.get('whatsapp').trim() && `WhatsApp: ${values.get('whatsapp')}`,
+        `Product: ${values.get('product')}`,
+        `Quantity: ${values.get('quantity')}`,
+        `Location: ${values.get('location').trim()}`,
+        values.get('date') && `Preferred delivery date: ${values.get('date')}`,
+        values.get('time') && `Preferred delivery time: ${values.get('time')}`,
+        values.get('message').trim() && `Additional message: ${values.get('message').trim()}`
+      ].filter(Boolean);
       formStatus.classList.add('show');
-      window.open(`https://wa.me/9779769694383?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+      window.open(`https://wa.me/9779769694383?text=${encodeURIComponent(messageLines.join('\n'))}`, '_blank', 'noopener');
     });
 
     // ========== FADE-UP ANIMATION ==========
